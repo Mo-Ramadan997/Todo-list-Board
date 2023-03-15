@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Mercedes Logo</title>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="app.js" defer></script>
+    <!-- <script src="oop.js" defer></script> -->
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+
+    <div class="column not-started" id="not-started-column">
+      <h2>Not Started</h2>
+      <ul class="tasks" id="not-started-tasks"></ul>
+      <button class="add-task-btn" onclick="showAddTaskModal('not-started')">Add Task</button>
+    </div>
+
+    <div class="column in-progress" id="in-progress-column">
+      <h2>In Progress</h2>
+      <ul class="tasks" id="in-progress-tasks"></ul>
+      <button class="add-task-btn" onclick="showAddTaskModal('in-progress')">Add Task</button>
+    </div>
+
+    <div class="column completed" id="completed-column">
+      <h2>Completed</h2>
+      <ul class="tasks" id="completed-tasks"></ul>
+      <button class="add-task-btn" onclick="showAddTaskModal('completed')">Add Task</button>
+    </div>
+
+    <div class="modal" id="add-task-modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="hideAddTaskModal()">&times;</span>
+        <h3>Add Task</h3>
+        <input type="text" placeholder="Task Name" id="task-name">
+        <button id="add-task-submit-btn" onclick="addTask()">Add</button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
